@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather App | Avinash Kumar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-clear-day">
+<main class="app">
+  <header>
+    <h1>🌤️ Weather<span>Now</span></h1>
+    <button id="unit-btn" type="button" aria-label="Switch unit">°C</button>
+  </header>
+  <form id="search-form">
+    <input id="city-input" type="text" placeholder="Search city e.g. Delhi" aria-label="City name" required>
+    <button type="submit" class="primary">Search</button>
+    <button type="button" id="loc-btn" title="Use my location" aria-label="Use my location">📍</button>
+  </form>
+  <div id="recent" aria-label="Recent searches"></div>
+  <p id="status" role="status"></p>
+  <div id="loader" class="loader hidden"></div>
+  <section id="current" class="glass hidden"></section>
+  <section id="hourly-wrap" class="glass hidden"><h3>Next 24 hours</h3><div id="hourly" class="hourly"></div></section>
+  <section id="details" class="details hidden"></section>
+  <section id="forecast-wrap" class="glass hidden"><h3>5-day forecast</h3><div id="forecast" class="forecast"></div></section>
+  <footer>Data: Open-Meteo API &middot; Built by Avinash Kumar, HMRITM</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
